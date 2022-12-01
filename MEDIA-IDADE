@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double n, media, soma, quant;
+    printf("Digite as idades:\n");
+    scanf("%lf", &n);
+    if(n < 0)
+    {
+        printf("IMPOSSIVEL CALCULAR");
+    }
+    else
+    {
+        quant = 0;
+        soma = 0;
+        media = 0;
+        while (n > 0)
+        {
+            quant = quant + 1;
+            soma = soma + n;
+            scanf("%lf", &n);
+        }
+        media = (double)soma / quant;
+    	printf("MEDIA = %.2lf", media);
+    }
+    
+    return 0;
+}
